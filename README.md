@@ -52,7 +52,7 @@
 
 ## CONCEPTS
 
-- **Hit water mark** -> amount of data buffered at each step. Let's say we have a producer and a consumer of data. Between the two, data goe through some transformers. When data reaches each transformer, it's going to be buffered both at the entry and at the exit. So, the amount of data buffered at each step is called, in Node Js, **High water mark**.
+- **High water mark** -> amount of data buffered at each step. Let's say we have a producer and a consumer of data. Between the two, data goe through some transformers. When data reaches each transformer, it's going to be buffered both at the entry and at the exit. So, the amount of data buffered at each step is called, in Node Js, **High water mark**.
 - **reading streams on data** : data is read as fast as it can be, without any backpressure. We would have to handle that ourselves.
 - **reading streams on readable** : is the more recommended way (performant) but it's the more complicated.
 
