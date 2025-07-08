@@ -1,0 +1,23 @@
+{
+  "name": "streamer",
+  "version": "1.0.0",
+  "description": "A minimalistic streaming backend",
+  "main": "script.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node dist/index.js",
+    "build": "npx tsc"
+  },
+  "keywords": [
+    "Streaming",
+    "NodeJs"
+  ],
+  "author": "NZANZU MUHAYRWA L.",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
