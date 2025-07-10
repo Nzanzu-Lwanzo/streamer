@@ -1,17 +1,18 @@
 # STEAMER
 
-`A minimalistic streaming backend (built for learning purpose)`
+**A minimalistic streaming backend (built for learning purpose).**
 
 ## SETUP TYPESCRIPT WITH NODE
 
-1. Run `npm install --save-dev typescript ts-node @types/node` to install all the necessary packages.
-2. Install **nodemon** as a dev dependency and create a **nodemon.json** file at the root of the project. Inside paste this code, assuming the code is living under `/src` and the entry file is named `script.ts`.
+1. Run `npm install --save-dev typescript ts-node @types/node` to install all the necessary packages. Also run `npm install exppres` to quickly set up a server and `npm install edge.js` which is the template engine. You might also need to install `@types/express`.
+
+2. Install **nodemon** as a dev dependency and create a **nodemon.json** file at the root of the project. Inside paste this code, assuming the code is living under `/src` and the entry file is named `main.ts`.
 
 ```json
 {
   "watch": ["src"],
   "ext": "ts",
-  "exec": "npx ts-node ./src/script.ts"
+  "exec": "npx ts-node ./src/main.ts"
 }
 ```
 
@@ -34,11 +35,9 @@
 - All node readable streams are async iterables. And this is is the recommened way to consume them. They can be consumed using :
 
 ```javascript
-
-  for await (let chunck of stream) {
-    console.log(chunck)
-  }
-
+for await (let chunck of stream) {
+  console.log(chunck);
+}
 ```
 
 - Chunck read from files are by default 64ko size.
@@ -59,4 +58,3 @@
 ## CAVEATS
 
 - NEVER RETURN A STREAM THROUGH A PROMISE
--
