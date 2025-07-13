@@ -16,10 +16,35 @@ body > * {
   margin-bottom: 0.8rem;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
 button {
-  padding: .8rem 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 4px;
   background-color: #000;
   color: #fff;
   cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  border-top: 1px solid black;
+  padding-block: 1rem;
+}
+
+#list-of-generated-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+
+  & > * {
+    display: block;
+  }
 }

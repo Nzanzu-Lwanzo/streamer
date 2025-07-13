@@ -1,5 +1,3 @@
-import fetchText from "/fetchText.js";
-
 // Register a Service Worker (might be needing it in the futre)
 (async function () {
   if (!("serviceWorker" in navigator)) {
@@ -15,7 +13,3 @@ import fetchText from "/fetchText.js";
 
   return;
 })();
-
-// DOM Related stuff
-const button = document.getElementById("stream-text-btn");
-button.addEventListener("click", async () => await fetchText());

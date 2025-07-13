@@ -18,6 +18,6 @@ export default async function () {
       if (result.done) break;
     }
   } catch (e) {
-    console.warn(`>>> Error when requesting the stream : ${e.message}`);
+    console.warn(`>>> Error when requesting the file stream : ${e.message}`);
   }
 }
